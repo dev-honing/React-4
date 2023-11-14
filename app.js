@@ -8,9 +8,12 @@ const displayText = document.getElementById("display-text");
 
 // 클릭 이벤트 생성
 button.addEventListener("click", function () {
+  // 현재 stateData.isActive의 상태를 확인하고 토글
   if ( stateData.isActive ){
+    // 현재가 true이면, false로 변경하여 토글
     stateData.isActive = false;
   } else {
+    // 현재가 false이면, true로 변경하여 토글
     stateData.isActive = true;
   }
   updateUI(); // updateUI() 함수 호출
