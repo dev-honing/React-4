@@ -26,3 +26,5 @@ function updateUI(){
     displayText.style.color = "red";
   }
 }
+
+updateUI(); // 초기 UI 설정
