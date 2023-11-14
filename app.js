@@ -13,5 +13,16 @@ button.addEventListener("click", function () {
   } else {
     stateData.isActive = true;
   }
-  updateUI();
+  updateUI(); // updateUI() 함수 호출
 })
+
+// updateUI() 함수 생성
+function updateUI(){
+  if (stateData.isActive) {
+    displayText.textContent = "활성화 상태입니다.";
+    displayText.style.color = "green";
+  } else {
+    displayText.textContent = "비활성화 상태입니다."
+    displayText.style.color = "red";
+  }
+}
