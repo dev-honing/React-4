@@ -10,3 +10,17 @@ function Greeting(isMorning){
 }
 console.log(Greeting(true)); // 좋은 아침!
 console.log(Greeting(false)); // 안녕, 반가워!
+
+// 3. DOM 조작
+document.addEventListener("DOMContentLoaded", function() {
+  let isHidden = false; // 변수 선언하고 초기화
+
+  const button = document.getElementById("toggle-button");
+  const myElement = document.getElementById("myElement");
+
+  button.addEventListener("click", function () {
+    // 클릭하면 isHidden 값을 토글하고 myElement의 visibility 속성 업데이트
+    isHidden = !isHidden;
+    myElement.style.visibility = isHidden ? "hidden" : "visible";
+  });
+});
