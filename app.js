@@ -17,14 +17,14 @@ button.addEventListener("click", function () {
 })
 
 // updateUI() 함수 생성
-function updateUI(){
-  if (stateData.isActive) {
-    displayText.textContent = "활성화 상태입니다.";
-    displayText.style.color = "green";
-  } else {
-    displayText.textContent = "비활성화 상태입니다."
-    displayText.style.color = "red";
-  }
+function updateUI() {
+  // 상태에 따라 표시할 메시지와 글자 색상을 설정
+  const message = stateData.isActive ? "활성화 상태입니다." : "비활성화 상태입니다.";
+  const color = stateData.isActive ? "green" : "red";
+
+  // displayText 엘리먼트의 텍스트 콘텐츠와 스타일을 업데이트
+  displayText.textContent = message;
+  displayText.style.color = color;
 }
 
 updateUI(); // 초기 UI 설정
